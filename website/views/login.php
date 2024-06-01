@@ -1,25 +1,22 @@
 
-<?php
-
-$email = $_POST['email'];
-
-$password = $_POST['password'];
-
-// Check if credentials match in the database
-$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-
-$res=$connection->query($sql);
+<?php include("includes/head.php");?>
 
 
-$c1 = $res->fetch();
+<?php include("includes/navigation.php");?>
 
-echo "$c1[2]";
+<div class="page">
+        
+        <div class="login-container">
+            <h2>Login</h2>
+            <form name="login" action="login.php" method="POST" > 
+                <input type="text" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <button type="login">Login</button>
+                <button type="register">Register</button>
+            </form>
+        </div>
+    </div>
+    
 
-echo "FIN";
+<?php include("includes/footer.php");?>
 
-$conn->close();
-
-
-
-
-?>
