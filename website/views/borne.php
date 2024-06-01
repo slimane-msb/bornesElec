@@ -1,9 +1,10 @@
 
-
-<?php include("includes/head.php");?>
-
-
-<?php include("includes/navigation.php");?>
+<?php 
+    include("utils.php");
+    loginFirst();
+    include("includes/head.php");
+    include("includes/navigation.php");
+?>
 
 <div class="page">
     <?php

@@ -18,5 +18,4 @@ function disconnectDb($connection){
     $connection->close();
 }
 
-
 ?>

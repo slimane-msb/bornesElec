@@ -4,7 +4,10 @@ include("db_connect.php");
 
 
 function getTable($dbname, $dbuser, $dbpass, $req, $titre){
+    
     $conn = connectDb($dbname, $dbuser, $dbpass);
+    
+
     
     
     $result = $conn->query($req);
