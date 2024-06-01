@@ -7,21 +7,24 @@ identifiant :
     dans   bornes (numeroId,nbPrises)
 */
 
+DROP TRIGGER IF EXISTS nbPrises_increment;
 
 DELIMITER //
 
-CREATE TRIGGER nbPrises_increment AFTER INSERT ON prises
+CREATE TRIGGER nbPrises_increment BEFORE INSERT ON prises
 FOR EACH ROW
 BEGIN
-    UPDATE bornes SET nbPrises = nbPrises + 1 WHERE numeroId = NEW.idBorne;
-END;
-//
+    DECLARE prise_count INT;
+    SELECT COUNT(idBorne) INTO prise_count
+    FROM prises
+    WHERE idBorne = NEW.idBorne;
 
-CREATE TRIGGER nbPrises_decrement AFTER DELETE ON prises
-FOR EACH ROW
-BEGIN
-    UPDATE bornes SET nbPrises = nbPrises - 1 WHERE numeroId = OLD.idBorne;
+    IF prise_count >= 3 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Le nombre de prise par bornes ne peut pas depasser 3';
+    END IF;
 END;
+
 //
 
 DELIMITER ;

@@ -1,7 +1,7 @@
 -- insert ExitSuccess
-INSERT INTO bornes (puissanceMax, type, nbPrises) VALUES (500.0, 'normale', 2);
-INSERT INTO bornes (puissanceMax, type, nbPrises) VALUES (1.0, 'normale', 2);
-INSERT INTO bornes (puissanceMax, type, nbPrises) VALUES (200.0, 'autre', 1);
+INSERT INTO bornes (puissanceMax, type) VALUES (500.0, 'normale');
+INSERT INTO bornes (puissanceMax, type) VALUES (1.0, 'normale');
+INSERT INTO bornes (puissanceMax, type) VALUES (200.0, 'autre');
 
 
 

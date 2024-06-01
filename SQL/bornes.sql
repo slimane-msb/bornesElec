@@ -1,13 +1,12 @@
 CREATE TABLE bornes (
     numeroId INT AUTO_INCREMENT PRIMARY KEY,
     puissanceMax FLOAT CHECK (puissanceMax >= 7 AND puissanceMax < 400),
-    type ENUM('lente', 'normale', 'rapide') DEFAULT 'normale',
-    nbPrises INT DEFAULT 1 CHECK (nbPrises < 4)
+    type ENUM('lente', 'normale', 'rapide') DEFAULT 'normale'
 );
 
+-- pour le nombre de borne on utilise une jointure avec StationBorne
 CREATE TABLE stations (
     numeroId INT AUTO_INCREMENT PRIMARY KEY,
-    nombreBornes INT,
     latitude FLOAT,
     longitude FLOAT, 
     codePostal VARCHAR(5),
@@ -41,9 +40,7 @@ CREATE TABLE vehicules (
 
 CREATE TABLE stationBorne (
     numeroIdStation INT,
-    numeroIdBorne INT,
-    PRIMARY KEY (numeroIdStation, numeroIdBorne),
-    UNIQUE(numeroIdBorne),
+    numeroIdBorne INT PRIMARY KEY,
     FOREIGN KEY (numeroIdStation) REFERENCES stations(numeroId),
     FOREIGN KEY (numeroIdBorne) REFERENCES bornes(numeroId)
 );
@@ -52,17 +49,16 @@ CREATE TABLE stationBorne (
 
 CREATE TABLE operateurBorne (
     numeroIdOperateur INT, 
-    numeroIdBorne INT, 
-    PRIMARY KEY (numeroIdOperateur, numeroIdBorne),
-    UNIQUE(numeroIdBorne),
+    numeroIdBorne INT PRIMARY KEY, 
     FOREIGN KEY (numeroIdOperateur) REFERENCES operateurs(numeroId),
     FOREIGN Key (numeroIdBorne) REFERENCES bornes(numeroId)
 );
 
+-- On peut avoir une borne avec deux fois la meme prise
 CREATE TABLE prises (
+    idPrise INT AUTO_INCREMENT PRIMARY KEY,
     idBorne INT,
     typePrise ENUM('E', 'T2', 'CSS1', 'CSS3', 'CHAMO') NOT NULL,
-    PRIMARY KEY (idBorne, typePrise),
     FOREIGN KEY (idBorne) REFERENCES bornes(numeroId)
 );
 

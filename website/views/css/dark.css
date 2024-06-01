@@ -1,13 +1,81 @@
+
 body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #151414a3;
+    padding: 0px;
+    text-align: center;
+}
+
+header h1 {
     margin: 0;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
     padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+footer {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 4px;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+.page {
+    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
+
+
+
+
+
+
+
+
+
 
 .login-container {
     background-color: #fff;
