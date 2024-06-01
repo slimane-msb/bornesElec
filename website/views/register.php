@@ -8,7 +8,7 @@
         include("utils.php");
         register($_POST['email'], $_POST['name'],  $_POST['password']);
     }
-?>
+?>  
 
 <div class="page">
         <div class="login-container">
