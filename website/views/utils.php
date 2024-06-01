@@ -15,8 +15,8 @@ function login($email, $password){
     
     if ($result->num_rows > 0) {
         $res = $result->fetch_assoc();
-        setcookie('name', $res["name"], time()+60);
-        setcookie('email', $res["email"], time()+60);
+        setcookie('name', $res["name"], time()+600);
+        setcookie('email', $res["email"], time()+600);
         header('Location: index.php'); 
     }else{
         loginFirst();
@@ -47,4 +47,11 @@ function register($email, $name, $password){
 }
 
 
+
+function logout(){
+    //unset name and email 
+    setcookie('name');
+    setcookie('email');
+    header('Location: index.php'); 
+}
 ?>

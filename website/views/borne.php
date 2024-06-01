@@ -6,6 +6,8 @@
     include("includes/navigation.php");
 ?>
 
+
+
 <div class="page">
     <?php
         $req = "SELECT * FROM bornesStation";

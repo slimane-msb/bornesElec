@@ -1,0 +1,1 @@
+CALL GetStationParCodePostalPrise('75000', 'T2');
