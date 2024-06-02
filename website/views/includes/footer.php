@@ -1,5 +1,5 @@
 <footer>
-	&copy; FIPA BDD <?php print date("Y");?>
+	&copy; FIPA BDD SM-YZ <?php print date("Y");?>
 </footer>
 
 </body>

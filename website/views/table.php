@@ -13,7 +13,9 @@ function getTable($dbname, $dbuser, $dbpass, $req, $titre){
     $result = $conn->query($req);
 
 
-    $res = "<H4>" . $titre . "</H4> <br>";
+    
+
+    $res .= "<H4>" . $titre . "</H4> <br>";
 
     if ($result->num_rows > 0) {
         $colonnes = $result->fetch_fields();
@@ -39,6 +41,8 @@ function getTable($dbname, $dbuser, $dbpass, $req, $titre){
     } else {
         $res .= "0 résultats";
     }
+
+  
 
     disconnectDb($conn);
     

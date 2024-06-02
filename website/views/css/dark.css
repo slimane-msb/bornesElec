@@ -91,7 +91,12 @@ header h1 {
     height: 90vh;
 }
 
-
+.pageAsRow{
+    padding-top: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+}
 
 
 /*************************************************/
@@ -105,6 +110,7 @@ header h1 {
 .login-container {
     background-color: #fff;
     padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     max-width: 400px;
@@ -146,6 +152,8 @@ header h1 {
 /*************************************************/
 /* table  */
 /*************************************************/
+
+
 
 table {
     border-collapse: collapse;
