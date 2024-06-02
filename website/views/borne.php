@@ -13,9 +13,9 @@
         
         try{
             $res = $conn->query($req);
-            header('Location: borne.php');
+            return createLog(False,"Borne est crée avec succès");
         }catch(Exception $e){
-            return "Veuillez entrer une puissance <400";
+            return createLog(True,"Veuillez entrer une puissance <400");
         }
     }
     
@@ -34,7 +34,7 @@
     <div class="login-container">
         <h2>Ajouter une borne</h2>
 
-        <?php showError($insertionLog); ?>
+        <?php showLog($insertionLog); ?>
 
         <form  name="recherche" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <input type="text" name="puissanceMax" id="puissanceMax" placeholder="Puissance Max" required>

@@ -15,7 +15,7 @@
     <div class="login-container">
         <h2>Login</h2>
 
-        <?php showError($loginLog); ?>
+        <?php showLog($loginLog); ?>
 
         <form name="login" method="POST" > 
             <input type="text" name="email" id="email" placeholder="Email" required>

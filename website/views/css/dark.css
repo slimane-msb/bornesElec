@@ -165,6 +165,23 @@ header h1 {
     border-radius: 2px;
   }
 
+.error-log{
+    font-size: small;
+    color: #fff;
+    background: #D0342C;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.success-log{
+    font-size: small;
+    color: #fff;
+    background: #2f9a23;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
 
 
 .choix-liste {

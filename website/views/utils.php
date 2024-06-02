@@ -24,7 +24,7 @@ function login($email, $password){
         header('Location: index.php'); 
     }else{
         disconnectDb($conn);
-        return "Veuillez entrer un mail et un mot de passe valide";
+        return createLog(True,"Veuillez entrer un mail et un mot de passe valide");
     }
 }
 
@@ -37,7 +37,7 @@ function register($email, $name, $password){
     
     if ($result->num_rows > 0) {
         disconnectDb($conn); 
-        return "utilisateur existant";
+        return createLog(True,"utilisateur existant");
     }else{
         $req = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
         $inserted = $conn->query($req);
@@ -48,7 +48,7 @@ function register($email, $name, $password){
             header('Location: index.php'); 
         }else{
             disconnectDb($conn);
-            return "Erreur dans la creation du compte, veuillez entrer des données valides";
+            return createLog(True,"Erreur dans la creation du compte, veuillez entrer des données valides");
         }
     }
 }
@@ -64,12 +64,27 @@ function logout(){
     header('Location: index.php'); 
 }
 
-function showError($error){
-    if (!empty($error)){
-        echo "<p class='error'>" . $error . "</p>";
-    } 
+
+
+
+function createLog ($isError, $message){
+    return array(
+        "isError"=>$isError,
+        "message" => $message
+    );
 }
 
+
+function showLog($log){
+    if (!empty($log)){
+        if($log["isError"]){
+            $classLog = "error-log";
+        }else{
+            $classLog = "success-log";
+        }
+        echo "<p class='$classLog'>" . $log["message"] . "</p>";
+    } 
+}
 
 
 

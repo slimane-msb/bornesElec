@@ -13,7 +13,7 @@
 <div class="page">
         <div class="login-container">
             <h2>Register</h2>
-            <?php showError($registerLog); ?>
+            <?php showLog($registerLog); ?>
             <form name="register" method="POST" >
                 <input type="text" id="email"name="email" placeholder="Email" required>
                 <input type="text" id="name" name="name" placeholder="Name" required>
