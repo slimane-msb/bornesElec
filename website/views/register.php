@@ -20,7 +20,11 @@
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <button type="register">Register</button>
             </form>
+            <div class="besoinCompte">
+                Vous avez deja un compte? <a href="login.php">Login</a>
+            </div>
         </div>
+        
     </div>
 
 <?php include("includes/footer.php");?>
