@@ -15,7 +15,7 @@ function getTable($dbname, $dbuser, $dbpass, $req, $titre){
 
     
 
-    $res .= "<H4>" . $titre . "</H4> <br>";
+    $res .= "<H2>" . $titre . "</H2> <br>";
 
     if ($result->num_rows > 0) {
         $colonnes = $result->fetch_fields();

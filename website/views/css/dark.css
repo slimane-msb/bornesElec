@@ -103,6 +103,18 @@ header h1 {
 /*************************************************/
 
 
+.table-container {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* max-width: 400px; */
+    width: 70%;
+    text-align: center;
+    align-items: center;
+}
 
 
 
@@ -150,6 +162,37 @@ header h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.button-carre {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+
+.button-table {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    /* background-color: #09011d; */
+    background-color: #03111b;
+    color: #ffffffbc;
+    border: none;
+    border-radius: 15px;
 }
 
 .login-container button:hover {
@@ -203,8 +246,8 @@ header h1 {
 
 table {
     border-collapse: collapse;
-    background-color: #2a3338;
-    width: 60%;
+    /* width: 100%; */
+    width: 70%;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -232,7 +275,8 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: #3d4449;
+    background-color: #03111b;
+    /* background-color: #7f93a1; */
 }
 
 
