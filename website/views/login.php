@@ -16,8 +16,10 @@
             <input type="text" name="email" id="email" placeholder="Email" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
             <button type="login">Login</button>
-            <button type="register">Register</button>
         </form>
+        <div class="besoinCompte">
+             Besoin d'un compte? <a href="register.php">Sign Up</a>
+        </div>
     </div>
 </div>
     

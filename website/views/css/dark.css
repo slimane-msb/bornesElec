@@ -9,7 +9,6 @@ body {
     font-family: 'Roboto', Arial, sans-serif; 
     background-color: #121212;
     color: #ffffff;
-    font-family: Arial, sans-serif;
 }
 
 
@@ -109,6 +108,7 @@ header h1 {
 
 .login-container {
     background-color: #fff;
+    color: #333;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
@@ -118,7 +118,14 @@ header h1 {
     text-align: center;
 }
 
-.login-container h2 {
+.besoinCompte {
+    margin-top: 10px;
+    font-size:small;
+    font-family: 'Roboto', Arial, sans-serif; 
+
+}
+
+.login-container h2 p {
     margin-bottom: 20px;
     color: #333;
 }
