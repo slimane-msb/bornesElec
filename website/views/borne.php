@@ -4,23 +4,45 @@
     loginFirst();
     include("includes/head.php");
     include("includes/navigation.php");
+    
+
+    function creerBorne ($puissanceMax, $type){
+        $req = "INSERT INTO bornes (puissanceMax, type) VALUES ($puissanceMax, '$type')";
+        include("db_connect.php");
+        $conn = connectDb("BORNES2", $dbuser, $dbpass);
+        
+        try{
+            $res = $conn->query($req);
+            header('Location: borne.php');
+        }catch(Exception $e){
+            return "Veuillez entrer une puissance <400";
+        }
+    }
+    
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
+        $insertionLog = creerBorne($_POST['puissanceMax'], $_POST['type']);
+
+    }
 ?>
 
 
 
 <div class="page">
-    <?php
-        $req = "SELECT * FROM bornesStation";
-        include("table.php");
-        $title = "Liste des bornes de recharge de la station de numéro 100";
-        echo getTable($dbname, $dbuser, $dbpass,$req, $title);
-    ?>
+
 
     <div class="login-container">
         <h2>Ajouter une borne</h2>
-        <form action="borneAjout.php" name="recherche" method="GET" > 
+
+        <?php showError($insertionLog); ?>
+
+        <form  name="recherche" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <input type="text" name="puissanceMax" id="puissanceMax" placeholder="Puissance Max" required>
-            <input type="text" name="type" id="type" placeholder="Type" required>
+            <select class="choix-liste" name="type" id="type" required>
+                <option value="lente">Lente</option>
+                <option value="normale">Normale</option>
+                <option value="rapide">Rapide</option>
+            </select>
             <button type="AjouterBorne">Ajouter Une Borne</button>
         </form>
     </div>

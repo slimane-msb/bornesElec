@@ -11,7 +11,7 @@
 <div class="page">
 
 <div class="page">
-        <p>Bienvenu <?php echo $_COOKIE["name"]?> </p>
+        <p>Bienvenu <?php echo $_COOKIE["name"] ;?> </p>
 </div>
 
 </div>

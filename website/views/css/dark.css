@@ -156,6 +156,28 @@ header h1 {
     background-color: #555;
 }
 
+
+.error {
+    font-size: small;
+    color: #fff;
+    background: #D0342C;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
+
+
+.choix-liste {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
 /*************************************************/
 /* table  */
 /*************************************************/
@@ -170,6 +192,9 @@ table {
     border-left: none;
     border-right: none;
   }
+
+
+
 
 th{
     font-weight: bold;
@@ -192,3 +217,5 @@ th, td {
 tr:nth-child(even) {
     background-color: #3d4449;
 }
+
+
