@@ -6,15 +6,17 @@
 ?>
 
 <div class="page">
-        <?php
-            $req = "SELECT * FROM stationIdf";
-            include("table.php");
-            $title = "Nombre de bornes par stations situées dans les départements Ile de France";
-            echo getTable("BORNES2",$req, $title);
-        ?>
+
+    <?php
+        $region = $_GET['region'];
+        $req = "CALL GetStationParRegion('$region');";
+        include("table.php");
+        $title = "Nombre de bornes par stations situées dans la region " . $region;
+        echo getTable("BORNES2",$req, $title);
+    ?>
 
         <div >
-            <a class="button-table" href="localiser.php">Nouvelle Recherche</a>
+            <a class="button-table" href="localiser.php">Recherche ave une autre region</a>
         </div>
 </div>
 
