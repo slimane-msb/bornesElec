@@ -116,12 +116,12 @@
 
         <form  name="recherche" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <input type="hidden" name="formName" value="ajoutStation"/>
-            <input type="text" name="codePostal" id="codePostal" placeholder="Code Postal" required>
-            <input type="text" name="distanceMinARoute" id="distanceMinARoute" placeholder="Distance Min AutoRoute">
-            <input type="text" name="latitude" id="latitude" placeholder="Latitude">
-            <input type="text" name="longitude" id="longitude" placeholder="Longitude">
-            <input type="text" name="ouverture" id="ouverture" placeholder="Ouverture 00:00:00">
-            <input type="text" name="fermeture" id="fermeture" placeholder="Fermeture 00:00:00">
+            <input type="number" name="codePostal" id="codePostal" placeholder="Code Postal" required>
+            <input type="number"  step="0.01" name="distanceMinARoute" id="distanceMinARoute" placeholder="Distance Min AutoRoute">
+            <input type="number"  step="0.01" name="latitude" id="latitude" placeholder="Latitude">
+            <input type="number"  step="0.01" name="longitude" id="longitude" placeholder="Longitude">
+            <input type="text"  onfocus="this.type='time';this.value='08:00'" name="ouverture" id="ouverture" placeholder="Ouverture">
+            <input type="text"  onfocus="this.type='time';this.value='22:00'" name="fermeture" id="fermeture" placeholder="Fermeture">
             <button type="AjouterBorne">Ajouter Une Station</button>
         </form>
     </div>

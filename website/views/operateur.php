@@ -203,8 +203,8 @@
             <input type="text" name="nom" id="nom" placeholder="Nom" >
             <input type="text" name="adresse" id="adresse" placeholder="Adresse" >
             <input type="text" name="telephone" id="telephone" placeholder="Telephone" >
-            <input type="text" name="tarifAbonne" id="tarifAbonne" placeholder="Tarif abonné" >
-            <input type="text" name="tarifNonAbonne" id="tarifNonAbonne" placeholder="Tarif non abonné" >
+            <input type="number"  step="0.01" name="tarifAbonne" id="tarifAbonne" placeholder="Tarif abonné" >
+            <input type="number"  step="0.01" name="tarifNonAbonne" id="tarifNonAbonne" placeholder="Tarif non abonné" >
             <button type="editOperateur">Editer Un Operateur</button>
         </form>
     </div>
@@ -236,8 +236,8 @@
             <input type="text" name="nom" id="nom" placeholder="Nom" required>
             <input type="text" name="adresse" id="adresse" placeholder="Adresse" >
             <input type="text" name="telephone" id="telephone" placeholder="Telephone" >
-            <input type="text" name="tarifAbonne" id="tarifAbonne" placeholder="Tarif abonné" >
-            <input type="text" name="tarifNonAbonne" id="tarifNonAbonne" placeholder="Tarif non abonné" >
+            <input type="number"  step="0.01" name="tarifAbonne" id="tarifAbonne" placeholder="Tarif abonné" >
+            <input type="number"  step="0.01" name="tarifNonAbonne" id="tarifNonAbonne" placeholder="Tarif non abonné" >
             <button type="ajoutOperateur">Ajouter Un Operateur</button>
         </form>
     </div>

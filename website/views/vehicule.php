@@ -12,8 +12,8 @@
     <div class="login-container">
         <h2>Trouver un vehicule par puissance</h2>
         <form action="vehiculeRes.php" name="recherche" method="GET" > 
-            <input type="text" name="puissanceMoteur" id="puissanceMoteur" placeholder="Puissance moteur minimum" required>
-            <input type="text" name="puissanceBatterie" id="puissanceBatterie" placeholder="Puissance batterie minimum" required>
+            <input type="number" step="0.01" name="puissanceMoteur" id="puissanceMoteur" placeholder="Puissance moteur minimum" required>
+            <input type="number" step="0.01" name="puissanceBatterie" id="puissanceBatterie" placeholder="Puissance batterie minimum" required>
             <button type="rechercher">Rechercher</button>
         </form>
     </div>

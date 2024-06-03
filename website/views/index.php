@@ -14,7 +14,7 @@
     <div class="login-container">
         <h2>Trouver une station</h2>
         <form action="indexA.php" name="recherche" method="GET" > 
-            <input type="text" name="codePostal" id="CodePostal" placeholder="Code Postal" required>
+            <input type="number" name="codePostal" id="CodePostal" placeholder="Code Postal" required>
             <select class="choix-liste" name="prise" id="prise" required>
                 <option value="CSS1">CSS1</option>
                 <option value="CSS3">CSS3</option>
