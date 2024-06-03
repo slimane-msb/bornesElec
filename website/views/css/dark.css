@@ -142,6 +142,7 @@ header h1 {
     color: #333;
 }
 
+.login-container input[type="time"],
 .login-container input[type="text"],
 .login-container input[type="password"] {
     width: 100%;

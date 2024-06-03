@@ -43,7 +43,7 @@
                     $conn->query($req);
                     return createLog(False,"Ajouté avec succès"); 
                 }catch(Exception $e){
-                    return createLog(True,"Veuillez entrer le tarif comme aa.bb"); 
+                    return createLog(True,"Veuillez entrer le tarif comme un nombre"); 
                 }
             }else{
                 return createLog(True,"Veuillez entrer un element a modifier"); 
@@ -149,7 +149,7 @@
 
         <form name="ajoutOperateur" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <input type="hidden" name="formName" value="ajout"/>
-            <input type="text" name="nom" id="nom" placeholder="Nom" >
+            <input type="text" name="nom" id="nom" placeholder="Nom" required>
             <input type="text" name="adresse" id="adresse" placeholder="Adresse" >
             <input type="text" name="telephone" id="telephone" placeholder="Telephone" >
             <input type="text" name="tarifAbonne" id="tarifAbonne" placeholder="Tarif abonné" >
