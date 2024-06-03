@@ -11,7 +11,7 @@
             $req = "SELECT * FROM stationIdf";
             include("table.php");
             $title = "Nombre de bornes par stations situées dans les départements Ile de France";
-            echo getTable($dbname, $dbuser, $dbpass,$req, $title);
+            echo getTable("BORNES2",$req, $title);
         ?>
 
         <div >

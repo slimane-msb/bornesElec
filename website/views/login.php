@@ -3,6 +3,7 @@
     include("utils.php");
     include("includes/head.php");
     include("includes/navigation.php");
+    $loginLog=NULL;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $loginLog = login($_POST['email'], $_POST['password']);

@@ -1,10 +1,9 @@
 <?php
-$dbhost = 'localhost';
-$dbname = 'BORNES2';
-$dbuser = 'phpmyadmin';
-$dbpass = 'g2CE32kcpOB3'; // juste en Dev
 
-function connectDb ($dbname, $dbuser, $dbpass){
+function connectDb ($dbname){
+    $dbhost = 'localhost';
+    $dbuser = 'phpmyadmin';
+    $dbpass = 'g2CE32kcpOB3'; // juste en Dev
     $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

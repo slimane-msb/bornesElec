@@ -4,6 +4,7 @@
     include("includes/head.php");
     include("includes/navigation.php");
     include("utils.php");
+    $registerLog=NULL;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $registerLog = register($_POST['email'], $_POST['name'],  $_POST['password']);

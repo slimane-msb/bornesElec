@@ -3,19 +3,13 @@
 include("db_connect.php");
 
 
-function getTable($dbname, $dbuser, $dbpass, $req, $titre){
+function getTable($dbname, $req, $titre){
     
-    $conn = connectDb($dbname, $dbuser, $dbpass);
-    
+    $conn = connectDb($dbname);
 
-    
-    
     $result = $conn->query($req);
 
-
-    
-
-    $res .= "<H2>" . $titre . "</H2> <br>";
+    $res = "<H2>" . $titre . "</H2> <br>";
 
     if ($result->num_rows > 0) {
         $colonnes = $result->fetch_fields();

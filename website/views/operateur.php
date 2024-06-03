@@ -5,6 +5,10 @@
     include("includes/head.php");
     include("includes/navigation.php");
 
+    $deleteLog=NULL;
+    $ajoutLog=NULL;
+    $editLog=NULL;
+
     function doesExistOperateur($key, $valeur,$conn){
         $req = "SELECT * FROM operateurs WHERE $key = '$valeur'";
         $result = $conn->query($req);
@@ -96,13 +100,19 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         include("db_connect.php");
-        $conn = connectDb("BORNES2", $dbuser, $dbpass);
-
-        if ($_GET['formName'] == 'edit') {
+        $conn = connectDb("BORNES2");
+        
+        if(isset($_GET['formName'])){
+            $action = $_GET['formName'];
+        }else{
+            $action = NULL;
+        }
+        
+        if ($action == 'edit') {
             $editLog = editOperateur($_GET, $conn);
-        } elseif ($_GET['formName'] == 'delete') {
+        } elseif ($action == 'delete') {
             $deleteLog = deleteOperateur($_GET['idOperateur'], $conn );
-        } elseif  ($_GET['formName'] == 'ajout'){
+        } elseif  ($action == 'ajout'){
             $ajoutLog = ajoutOperateur($_GET, $conn );
         }
         disconnectDb($conn);

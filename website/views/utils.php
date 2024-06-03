@@ -12,7 +12,7 @@ function loginFirst(){
 function login($email, $password){
     $req = "SELECT * FROM users WHERE email = '$email' AND password='$password'";
     include("db_connect.php");
-    $conn = connectDb("USERS", $dbuser, $dbpass);
+    $conn = connectDb("USERS");
 
     $result = $conn->query($req);
     
@@ -31,7 +31,7 @@ function login($email, $password){
 function register($email, $name, $password){
     $req = "SELECT * FROM users WHERE email = '$email' AND password='$password'";
     include("db_connect.php");
-    $conn = connectDb("USERS", $dbuser, $dbpass);
+    $conn = connectDb("USERS");
 
     $result = $conn->query($req);
     

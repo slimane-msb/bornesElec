@@ -13,7 +13,7 @@
             $req = "CALL GetStationParCodePostalPrise('$codePostal', '$prise');";
             include("table.php");
             $title = "voici votre liste";
-            echo getTable("BORNES2", $dbuser, $dbpass,$req, $title);
+            echo getTable("BORNES2",$req, $title);
         ?>
 
         <div >

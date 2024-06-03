@@ -13,7 +13,7 @@
         $req = "SELECT * FROM stationTesla";
         include("table.php");
         $title = "Liste des stations ayant au moins une borne compatible avec une Tesla modèle 3";
-        echo getTable($dbname, $dbuser, $dbpass,$req, $title);
+        echo getTable("BORNES2", $req, $title);
     ?>
 </div>
 

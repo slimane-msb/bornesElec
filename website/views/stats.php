@@ -13,7 +13,7 @@
         $req = "SELECT * FROM bornesParDepartement";
         include("table.php");
         $title = "Numéro du département qui a le plus de bornes de recharge";
-        echo getTable($dbname, $dbuser, $dbpass,$req, $title);
+        echo getTable("BORNES2",$req, $title);
     ?>
 </div>
 
