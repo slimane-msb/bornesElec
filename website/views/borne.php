@@ -67,7 +67,7 @@
             }
             return $res;
         }catch(Exception $e){
-            return array(1);
+            return array();
         }        
     }
 
@@ -142,7 +142,7 @@
                 <option value="rapide">Rapide</option>
             </select>
             <select class="choix-liste" name="station" id="station" required>
-            <option value="">Choisir une station</option>
+                <option value="">Choisir une station</option>
                 <?php
                     echo getStationId();
                 ?>

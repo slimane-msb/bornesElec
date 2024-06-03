@@ -60,7 +60,9 @@
 
 
     function editOperateur($valeurArray, $conn){
-        $idOperateur = $valeurArray['idOperateur'];
+        $idOperateurJson = $valeurArray['idOperateur'];
+        $idOperateur = json_decode($idOperateurJson, true);
+        $idOperateur = $idOperateur['numeroId'];
         if (doesExistOperateur("numeroId",$idOperateur,$conn )){
             $req = "UPDATE operateurs SET ";
             
@@ -97,11 +99,73 @@
         
     }
 
+    function getOperateursIdName( ){
+        try{        
+            $req = "SELECT numeroId,nom FROM operateurs";
+            $conn = connectDb("BORNES2");
+            $result = $conn->query($req);
+            $res = array();
+            if ($result->num_rows > 0) {
+                while ($ligne = $result->fetch_assoc()) {
+                    $res[] = $ligne;
+                }
+            }
+            return $res;
+        }catch(Exception $e){
+            return array();
+        }        
+    }
+
+    
+
+    function getOperateurs( ){
+        try{        
+            $req = "SELECT * FROM operateurs";
+            $conn = connectDb("BORNES2");
+            $result = $conn->query($req);
+            $res = array();
+            if ($result->num_rows > 0) {
+                while ($ligne = $result->fetch_assoc()) {
+                    $res[] = $ligne;
+                }
+            }
+            return $res;
+        }catch(Exception $e){
+            return array();
+        }        
+    }
+
+    function getOperateursHtml( ){
+        $operateurs = getOperateursIdName( );
+        $res = "";
+        foreach ($operateurs as $operateur){
+            $id = $operateur['numeroId'];
+            $nom = $operateur['nom'];
+            $res .= "<option value='$id'>$id:$nom</option>";
+        }
+        return $res;
+    }
+
+
+
+    function getOperateursHtmlJson(){
+        $operateurs = getOperateurs( );
+        $res = "";
+        foreach ($operateurs as $operateur){
+            $json = htmlspecialchars(json_encode($operateur));
+            $id = $operateur['numeroId'];
+            $nom = $operateur['nom'];
+            $res .= "<option value='$json'>$id:$nom</option>";
+        }
+        return $res;
+    }
+
+
 
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         include("db_connect.php");
         $conn = connectDb("BORNES2");
-        
+
         if(isset($_GET['formName'])){
             $action = $_GET['formName'];
         }else{
@@ -130,7 +194,12 @@
 
         <form name="editOperateur" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
             <input type="hidden" name="formName" value="edit"/>
-            <input type="text" name="idOperateur" id="idOperateur" placeholder="Identifiant" required>
+            <select class="choix-liste" name="idOperateur" id="idOperateurJson" onchange="updateForm()" required>
+                <option value="">Choisir un operateur</option>
+                <?php
+                    echo getOperateursHtmlJson();
+                ?>
+            </select>
             <input type="text" name="nom" id="nom" placeholder="Nom" >
             <input type="text" name="adresse" id="adresse" placeholder="Adresse" >
             <input type="text" name="telephone" id="telephone" placeholder="Telephone" >
@@ -147,7 +216,12 @@
 
         <form name="supprimerOperateur" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>" > 
             <input type="hidden" name="formName" value="delete"/>
-            <input type="text" name="idOperateur" id="idOperateur" placeholder="Identifiant" required>
+            <select class="choix-liste" name="idOperateur" id="idOperateur" required>
+                <option value="">Choisir un operateur</option>
+                <?php
+                    echo getOperateursHtml();
+                ?>
+            </select>
             <button type="supprimerOperateur">Supprimer Un Operateur</button>
         </form>
     </div>
