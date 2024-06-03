@@ -6,18 +6,13 @@
 ?>
 
 <div class="page">
-    <!-- <div class="table-container"> -->
-        <?php
-            $req = "SELECT * FROM stationIdf";
-            include("table.php");
-            $title = "Nombre de bornes par stations situées dans les départements Ile de France";
-            echo getTable("BORNES2",$req, $title);
-        ?>
-
-        <div >
-            <a class="button-table" href="localiser.php">Nouvelle Recherche</a>
-        </div>
-    <!-- </div> -->
+    <div class="login-container">
+        <h2>Trouver le nombre de bornes par stations situées par départements</h2>
+        <form action="localiser Res.php" name="recherche" method="GET" > 
+            <input type="text" name="departement" id="departement" placeholder="Département" required>
+            <button type="rechercher">Rechercher</button>
+        </form>
+    </div>
 </div>
 
 <?php include("includes/footer.php");?>

@@ -9,14 +9,15 @@
 
 
 <div class="page">
-    <?php
-        $req = "SELECT * FROM vehiculesBatterieSup";
-        include("table.php");
-        $title = "Liste des véhicules ayant une batterie de puissance supérieure à 50 KW";
-        echo getTable("BORNES2",$req, $title);
-    ?>
+    <div class="login-container">
+        <h2>Trouver un vehicule par puissance</h2>
+        <form action="vehiculeRes.php" name="recherche" method="GET" > 
+            <input type="text" name="puissanceMoteur" id="puissanceMoteur" placeholder="Puissance moteur minimum" required>
+            <input type="text" name="puissanceBatterie" id="puissanceBatterie" placeholder="Puissance batterie minimum" required>
+            <button type="rechercher">Rechercher</button>
+        </form>
+    </div>
 </div>
-
     
 
 

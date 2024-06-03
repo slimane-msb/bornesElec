@@ -64,6 +64,7 @@ SELECT
     ON SB.numeroIdStation = IDF.numeroId
     GROUP BY IDF.numeroId
     
+    
 -- Numéro du département qui a le plus de bornes de recharge
 CREATE VIEW bornesParDepartement AS
 SELECT 
@@ -73,40 +74,8 @@ SELECT
     INNER JOIN stationBorne SB
     ON SB.numeroIdStation = S.numeroId
     GROUP BY LEFT(S.codePostal, 2)
+    ORDER BY count(SB.numeroIdBorne) DESC
     
 
-
-
-
--- demande un code postal et un type de prise et affiche l’ensemble des
--- stations de recharge offrant au moins une borne correspondante
-DELIMITER //
-
-CREATE PROCEDURE GetStationParCodePostalPrise(IN codePostalParam VARCHAR(100), IN typePriseParam VARCHAR(100))
-BEGIN
-    SELECT 
-        SB.numeroId AS 'Station',
-        SB.codePostal AS 'Code postal',
-        P.typePrise AS 'Type prise',
-        SB.latitude AS 'Latitude',
-        SB.longitude AS 'Longitude',
-        SB.distanceMinARoute AS 'Distance Min autoroute',
-        SB.ouverture AS 'Ouverture',
-        SB.fermeture AS 'Fermeture'
-    FROM (
-        SELECT *
-        FROM stations S
-        INNER JOIN stationBorne SB ON SB.numeroIdStation = S.numeroId
-        WHERE S.codePostal = codePostalParam
-    ) AS SB
-    INNER JOIN prises P ON P.idBorne = SB.numeroIdBorne
-    WHERE P.typePrise = typePriseParam;
-END //
-
-DELIMITER ;
-
-
-
-    
 
 

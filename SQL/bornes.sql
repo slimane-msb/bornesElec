@@ -39,6 +39,8 @@ CREATE TABLE vehicules (
 
 
 
+
+
 CREATE TABLE stationBorne (
     numeroIdStation INT,
     numeroIdBorne INT PRIMARY KEY,
@@ -75,6 +77,10 @@ CREATE TABLE vehiculeBorne (
 );
 
 
+CREATE TABLE departements (
+    departement   VARCHAR(3)  PRIMARY KEY,
+    region VARCHAR(100) NOT NULL 
+);
 
 
 
