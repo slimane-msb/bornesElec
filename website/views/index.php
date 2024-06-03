@@ -15,7 +15,13 @@
         <h2>Trouver une station</h2>
         <form action="indexA.php" name="recherche" method="GET" > 
             <input type="text" name="codePostal" id="CodePostal" placeholder="Code Postal" required>
-            <input type="text" name="prise" id="prise" placeholder="Prise" required>
+            <select class="choix-liste" name="prise" id="prise" required>
+                <option value="CSS1">CSS1</option>
+                <option value="CSS3">CSS3</option>
+                <option value="CHAMO">CHAMO</option>
+                <option value="E">E</option>
+                <option value="T2">T2</option>
+            </select>
             <button type="rechercher">Rechercher</button>
         </form>
     </div>

@@ -22,7 +22,8 @@ CREATE TABLE operateurs (
     adresse VARCHAR(255),
     telephone VARCHAR(20),
     tarifAbonne DECIMAL(10, 2) DEFAULT 0.00,
-    tarifNonAbonne DECIMAL(10, 2) DEFAULT 0.00
+    tarifNonAbonne DECIMAL(10, 2) DEFAULT 0.00,
+    UNIQUE(nom)
 );
 
 

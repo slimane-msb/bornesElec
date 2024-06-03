@@ -28,7 +28,7 @@
 
 
 
-<div class="page">
+<div class="page pageAsRow">
 
 
     <div class="login-container">
@@ -46,7 +46,27 @@
             <button type="AjouterBorne">Ajouter Une Borne</button>
         </form>
     </div>
+    
+
+    <div class="login-container">
+        <h2>Ajouter une station</h2>
+
+        <?php showLog($insertionLog); ?>
+
+        <form  name="recherche" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
+            <input type="text" name="puissanceMax" id="puissanceMax" placeholder="Puissance Max" required>
+            <select class="choix-liste" name="type" id="type" required>
+                <option value="lente">Lente</option>
+                <option value="normale">Normale</option>
+                <option value="rapide">Rapide</option>
+            </select>
+            <button type="AjouterBorne">Ajouter Une Borne</button>
+        </form>
     </div>
+
+    
+
+</div>
 
 
 <?php include("includes/footer.php");?>

@@ -5,8 +5,8 @@
     include("includes/head.php");
     include("includes/navigation.php");
 
-    function doesExistOperateur($idOperateur, $conn){
-        $req = "SELECT * FROM operateurs WHERE numeroId = '$idOperateur'";
+    function doesExistOperateur($key, $valeur,$conn){
+        $req = "SELECT * FROM operateurs WHERE $key = '$valeur'";
         $result = $conn->query($req);
         if ($result->num_rows > 0) {
             return True;
@@ -16,9 +16,48 @@
 
     }
 
+    function ajoutOperateur($valeurArray, $conn){
+        $nom = $valeurArray['nom'];
+        if (!doesExistOperateur("nom", $nom,$conn )){
+            $req = "INSERT INTO operateurs ";
+            
+            $nbElement = 0;
+            $keys = "(";
+            $values = "(";
+            foreach ($valeurArray as $colonne => $valeur) {
+                if($valeur != ""  && $colonne!="formName" ){
+                    $nbElement++;
+                    $keys .= $colonne . ",";
+                    $values .= "'" . $valeur . "',";
+                }
+            }
+            if($nbElement>0){
+                $keys = substr($keys, 0, -1);
+                $keys .=")";
+                $values = substr($values, 0, -1);
+                $values .=")";
+
+                $req .= $keys . " VALUES " . $values;
+                
+                try{
+                    $conn->query($req);
+                    return createLog(False,"Ajouté avec succès"); 
+                }catch(Exception $e){
+                    return createLog(True,"Veuillez entrer le tarif comme aa.bb"); 
+                }
+            }else{
+                return createLog(True,"Veuillez entrer un element a modifier"); 
+            }
+        }else{
+            return createLog(True,"Operateur deja existant");
+        }
+
+    }
+
+
     function editOperateur($valeurArray, $conn){
         $idOperateur = $valeurArray['idOperateur'];
-        if (doesExistOperateur($idOperateur,$conn )){
+        if (doesExistOperateur("numeroId",$idOperateur,$conn )){
             $req = "UPDATE operateurs SET ";
             
             $nbElement = 0;
@@ -44,7 +83,7 @@
     }
 
     function deleteOperateur($idOperateur, $conn){
-        if (doesExistOperateur($idOperateur, $conn)){
+        if (doesExistOperateur("numeroId",$idOperateur, $conn)){
             $req = "DELETE FROM operateurs WHERE numeroId = $idOperateur";
             $conn->query($req);
             return createLog(False,"Supprimé avec succès"); 
@@ -63,7 +102,9 @@
             $editLog = editOperateur($_GET, $conn);
         } elseif ($_GET['formName'] == 'delete') {
             $deleteLog = deleteOperateur($_GET['idOperateur'], $conn );
-        } 
+        } elseif  ($_GET['formName'] == 'ajout'){
+            $ajoutLog = ajoutOperateur($_GET, $conn );
+        }
         disconnectDb($conn);
     } 
 
@@ -100,6 +141,24 @@
             <button type="supprimerOperateur">Supprimer Un Operateur</button>
         </form>
     </div>
+
+    <div class="login-container">
+        <h2>Ajouter un operateur</h2>
+
+        <?php showLog($ajoutLog); ?>
+
+        <form name="ajoutOperateur" method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
+            <input type="hidden" name="formName" value="ajout"/>
+            <input type="text" name="nom" id="nom" placeholder="Nom" >
+            <input type="text" name="adresse" id="adresse" placeholder="Adresse" >
+            <input type="text" name="telephone" id="telephone" placeholder="Telephone" >
+            <input type="text" name="tarifAbonne" id="tarifAbonne" placeholder="Tarif abonné" >
+            <input type="text" name="tarifNonAbonne" id="tarifNonAbonne" placeholder="Tarif non abonné" >
+            <button type="ajoutOperateur">Ajouter Un Operateur</button>
+        </form>
+    </div>
+
+
 </div>
 
 
