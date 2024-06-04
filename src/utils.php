@@ -1,11 +1,10 @@
 <?php
 
+
 function loginFirst(){
     if (!isset($_COOKIE['name'])) {
-        header('Location: login.php'); 
-    }else{
-        // il faut lancer sessions dans toutes les pages
-        session_start();
+        header('Location: login.php');
+        exit();
     }
 }
 
@@ -59,9 +58,8 @@ function logout(){
     //unset name and email 
     setcookie('name');
     setcookie('email');
-    session_unset();  
-    session_destroy();
-    header('Location: index.php'); 
+    header('Location: index.php');
+    exit(); 
 }
 
 

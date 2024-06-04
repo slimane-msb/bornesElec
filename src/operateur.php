@@ -1,4 +1,3 @@
-
 <?php 
     include("utils.php");
     loginFirst();
@@ -61,9 +60,13 @@
 
     function editOperateur($valeurArray, $conn){
         $idOperateurJson = $valeurArray['idOperateur'];
+        $nom = $valeurArray['nom'];
         $idOperateur = json_decode($idOperateurJson, true);
         $idOperateur = $idOperateur['numeroId'];
         if (doesExistOperateur("numeroId",$idOperateur,$conn )){
+            if (!empty($nom) && doesExistOperateur("nom", $nom,$conn )){
+                return createLog(True,"Le nom est deja existant");
+            }
             $req = "UPDATE operateurs SET ";
             
             $nbElement = 0;

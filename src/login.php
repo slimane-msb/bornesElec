@@ -1,13 +1,20 @@
-
 <?php 
-    include("utils.php");
-    include("includes/head.php");
-    include("includes/navigation.php");
-    $loginLog=NULL;
 
+    include("utils.php");
+    $loginLog=NULL;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $loginLog = login($_POST['email'], $_POST['password']);
     }
+    
+
+
+    include("includes/head.php");
+    include("includes/navigation.php");
+    
+
+
+    
+    
     
     
 ?>
@@ -17,8 +24,9 @@
         <h2>Login</h2>
 
         <?php showLog($loginLog); ?>
-
         <form name="login" method="POST" > 
+
+        <!-- <form action="loginA.php" name="login" method="POST" >  -->
             <input type="text" name="email" id="email" placeholder="Email" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
             <button type="login">Login</button>

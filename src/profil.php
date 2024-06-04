@@ -1,6 +1,3 @@
-
-
-
 <?php 
     include("utils.php");
     loginFirst();
