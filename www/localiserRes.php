@@ -12,7 +12,7 @@
         $req = "CALL GetStationParRegion('$region');";
         include("table.php");
         $title = "Nombre de bornes par stations situées dans la region " . $region;
-        echo getTable("BORNES2",$req, $title);
+        echo getTable("BORNES",$req, $title);
     ?>
 
         <div >

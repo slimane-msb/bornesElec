@@ -8,7 +8,7 @@
     function getRegions(){
         try{        
             $req = "SELECT DISTINCT region FROM departements";
-            $conn = connectDb("BORNES2");
+            $conn = connectDb("BORNES");
             $result = $conn->query($req);
             $res = array();
             if ($result->num_rows > 0) {

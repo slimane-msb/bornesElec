@@ -102,7 +102,7 @@
     function getOperateursIdName( ){
         try{        
             $req = "SELECT numeroId,nom FROM operateurs";
-            $conn = connectDb("BORNES2");
+            $conn = connectDb("BORNES");
             $result = $conn->query($req);
             $res = array();
             if ($result->num_rows > 0) {
@@ -121,7 +121,7 @@
     function getOperateurs( ){
         try{        
             $req = "SELECT * FROM operateurs";
-            $conn = connectDb("BORNES2");
+            $conn = connectDb("BORNES");
             $result = $conn->query($req);
             $res = array();
             if ($result->num_rows > 0) {
@@ -164,7 +164,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         include("db_connect.php");
-        $conn = connectDb("BORNES2");
+        $conn = connectDb("BORNES");
 
         if(isset($_GET['formName'])){
             $action = $_GET['formName'];

@@ -17,7 +17,7 @@
         $req = "CALL GetVehiculeParPuissanceMin('$puissanceMoteur', '$puissanceBatterie');";
         include("table.php");
         $title = "Liste des véhicules ayant une batterie de puissance supérieure à " . $puissanceBatterie ." KW et de moteur supérieure à  ". $puissanceMoteur . " Kw";
-        echo getTable("BORNES2",$req, $title);
+        echo getTable("BORNES",$req, $title);
     ?>
 
     <div >

@@ -14,7 +14,7 @@ SELECT
     FROM bornes B
     INNER JOIN stationBorne SB
     On SB.numeroIdBorne = B.numeroId
-    WHERE SB.numeroIdStation = 100 
+    WHERE SB.numeroIdStation = 100 ;
 
 
 
@@ -62,7 +62,7 @@ SELECT
     ) AS IDF
     INNER JOIN stationBorne SB
     ON SB.numeroIdStation = IDF.numeroId
-    GROUP BY IDF.numeroId
+    GROUP BY IDF.numeroId;
     
     
 -- Numéro du département qui a le plus de bornes de recharge
@@ -74,7 +74,7 @@ SELECT
     INNER JOIN stationBorne SB
     ON SB.numeroIdStation = S.numeroId
     GROUP BY LEFT(S.codePostal, 2)
-    ORDER BY count(SB.numeroIdBorne) DESC
+    ORDER BY count(SB.numeroIdBorne) DESC;
     
 
 

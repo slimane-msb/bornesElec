@@ -15,7 +15,7 @@
         $req = "CALL GetStationParVehicule('$marque', '$modele');";
         include("table.php");
         $title = "Liste des stations ayant au moins une borne compatible avec " . $marque ." ". $modele;
-        echo getTable("BORNES2",$req, $title);
+        echo getTable("BORNES",$req, $title);
     ?>
 
     <div >

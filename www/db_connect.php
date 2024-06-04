@@ -1,7 +1,7 @@
 <?php
 
 function connectDb ($dbname){
-    $dbhost = 'localhost';
+    $dbhost = 'db';
     $dbuser = 'phpmyadmin';
     $dbpass = 'g2CE32kcpOB3'; // juste en Dev
     $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
