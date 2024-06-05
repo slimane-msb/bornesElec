@@ -5,10 +5,6 @@ ATTENTION : CE PROJET EST UNIQUEMENT EN VERSION DEV
 Pour lancer le projet :
 1. Build le projet 
 
-# MyPhpAdmin
-- Server:mysql_db
-- User:root
-- Password:root
 
 
 ## Build Sur Docker en 1 commande (Recommandé) : 
@@ -40,10 +36,16 @@ mysql -u root -p "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';"
 mysql -u root -proot -e "CREATE DATABASE BORNES;"
 
 
-mysql -u root -proot BORNES < ./SQL/all/init.sql
+mysql -u root -proot BORNES < ./SQL/creation.sql
 
 ```
 
 Consultez le projet sur : 
 - [myPhpAdmin](http://localhost/phpmyadmin/) sur http://localhost/phpmyadmin/
 - [App](http://localhost/bornesElec/src) sur http://localhost/bornesElec/src
+
+
+# Se connecter a MyPhpAdmin
+- Server: mysql_db
+- User: root
+- Password: root
