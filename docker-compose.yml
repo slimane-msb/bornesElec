@@ -6,7 +6,7 @@ services:
     volumes:
         - ./src:/var/www/html
     ports:
-        - 80:80
+        - 9000:80
 
   mysql_db:
     image: mysql:latest
