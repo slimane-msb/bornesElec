@@ -240,12 +240,15 @@ SELECT
 /***                PROCEDURES              ***/
 /**********************************************/
 
+DROP PROCEDURE IF EXISTS GetStationParCodePostalPrise;
+DROP PROCEDURE IF EXISTS GetStationParVehicule;
+DROP PROCEDURE IF EXISTS GetVehiculeParPuissanceMin;
 
+
+DELIMITER //
 
 -- demande un code postal et un type de prise et affiche l’ensemble des
 -- stations de recharge offrant au moins une borne correspondante
-DELIMITER //
-
 CREATE PROCEDURE GetStationParCodePostalPrise(IN codePostalParam VARCHAR(100), IN typePriseParam VARCHAR(100))
 BEGIN
     SELECT 

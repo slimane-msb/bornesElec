@@ -1,6 +1,14 @@
 # bornesElec
+
+ATTENTION : CE PROJET EST UNIQUEMENT EN VERSION DEV
+
 Pour lancer le projet :
 1. Build le projet 
+
+# MyPhpAdmin
+- Server:mysql_db
+- User:root
+- Password:root
 
 
 ## Build Sur Docker en 1 commande (Recommandé) : 
