@@ -93,9 +93,17 @@
 
     function deleteOperateur($idOperateur, $conn){
         if (doesExistOperateur("numeroId",$idOperateur, $conn)){
-            $req = "DELETE FROM operateurs WHERE numeroId = $idOperateur";
-            $conn->query($req);
-            return createLog(False,"Supprimé avec succès"); 
+            $reqBO = "DELETE FROM operateurBorne WHERE numeroIdOperateur = $idOperateur";
+            $reqO = "DELETE FROM operateurs WHERE numeroId = $idOperateur";
+            try{
+                $conn->query($reqBO);
+                $conn->query($reqO);
+                return createLog(False,"Supprimé avec succès"); 
+            }catch(Exception $e){
+                return createLog(True,"Operation non possible".$e); 
+            }    
+            
+            
         }else{
             return createLog(True,"Operateur n'existe pas");
         }
