@@ -40,7 +40,7 @@ mysql -u root -p "ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';"
 mysql -u root -proot -e "CREATE DATABASE BORNES;"
 
 
-mysql -u root -proot BORNES < ./data/init.sql
+mysql -u root -proot BORNES < ./SQL/all/init.sql
 
 ```
 

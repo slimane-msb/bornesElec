@@ -68,33 +68,33 @@ INSERT INTO stations (latitude, longitude, codePostal, distanceMinARoute, ouvert
 
 
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope2', '2 avenue de la paix', '0625262544', 9.99, 14.99);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope3', '3 boulevard de la liberté', '0625262545', 8.99, 13.99);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope3', '3 boulevard de la liberte', '0625262545', 8.99, 13.99);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope4', '4 rue du bonheur', '0625262546', 7.99, 12.99);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope5', '5 chemin de l''étoile', '0625262547', 10.99, 15.99);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope5', '5 chemin de l''etoile', '0625262547', 10.99, 15.99);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope6', '6 rue de la victoire', '0625262548', 11.99, 16.99);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope7', '7 avenue des rêves', '0625262549', 9.50, 14.50);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope8', '8 route du succès', '0625262550', 9.75, 14.75);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope7', '7 avenue des reves', '0625262549', 9.50, 14.50);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope8', '8 route du succes', '0625262550', 9.75, 14.75);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope9', '9 sentier de la chance', '0625262551', 9.25, 14.25);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope10', '10 avenue de la gloire', '0625262552', 10.25, 15.25);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope11', '11 place de l''avenir', '0625262553', 10.50, 15.50);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope12', '12 avenue de la fortune', '0625262554', 11.25, 16.25);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope13', '13 rue de la prospérité', '0625262555', 11.50, 16.50);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope14', '14 chemin du succès', '0625262556', 10.75, 15.75);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope13', '13 rue de la prosperite', '0625262555', 11.50, 16.50);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope14', '14 chemin du succes', '0625262556', 10.75, 15.75);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope15', '15 boulevard de l''harmonie', '0625262557', 11.75, 16.75);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope16', '16 avenue de la sérénité', '0625262558', 12.00, 17.00);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope17', '17 chemin de la plénitude', '0625262559', 12.50, 17.50);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope18', '18 rue de la félicité', '0625262560', 13.25, 18.25);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope19', '19 avenue de l''épanouissement', '0625262561', 12.75, 17.75);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope16', '16 avenue de la serenite', '0625262558', 12.00, 17.00);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope17', '17 chemin de la plenitude', '0625262559', 12.50, 17.50);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope18', '18 rue de la felicite', '0625262560', 13.25, 18.25);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope19', '19 avenue de l''epanouissement', '0625262561', 12.75, 17.75);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope20', '20 boulevard de la joie', '0625262562', 13.50, 18.50);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope21', '21 route du bonheur', '0625262563', 13.75, 18.75);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope22', '22 sentier de la réussite', '0625262564', 14.00, 19.00);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope22', '22 sentier de la reussite', '0625262564', 14.00, 19.00);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope23', '23 avenue de l''espoir', '0625262565', 14.50, 19.50);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope24', '24 chemin de l''accomplissement', '0625262566', 15.25, 20.25);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope25', '25 boulevard de la réussite', '0625262567', 15.50, 20.50);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope26', '26 avenue de l''épanouissement', '0625262568', 15.75, 20.75);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope27', '27 rue du succès', '0625262569', 16.00, 21.00);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope25', '25 boulevard de la reussite', '0625262567', 15.50, 20.50);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope26', '26 avenue de l''epanouissement', '0625262568', 15.75, 20.75);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope27', '27 rue du succes', '0625262569', 16.00, 21.00);
 INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope28', '28 chemin de la victoire', '0625262570', 16.25, 21.25);
-INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope29', '29 avenue de la liberté', '0625262571', 16.50, 21.50);
+INSERT INTO operateurs (nom, adresse, telephone, tarifAbonne, tarifNonAbonne) VALUES ('Ope29', '29 avenue de la liberte', '0625262571', 16.50, 21.50);
 
 
 INSERT INTO vehicules (marque, modele, puissanceMoteur, puissanceBatterie) VALUES ('Tesla', 'Model S', 350, 100);
@@ -174,31 +174,31 @@ INSERT INTO vehiculeBorne (marque, modele, numeroIdBorne) VALUES ('Nissan', 'Lea
 /***                REGION INSERT           ***/
 /**********************************************/
 INSERT INTO departements (departement, region) VALUES
-    ('01', 'Auvergne-Rhône-Alpes'),
+    ('01', 'Auvergne-Rhone-Alpes'),
     ('02', 'Hauts-de-France'),
-    ('03', 'Auvergne-Rhône-Alpes'),
-    ('04', 'Provence-Alpes-Côte d''Azur'),
-    ('05', 'Provence-Alpes-Côte d''Azur'),
-    ('06', 'Provence-Alpes-Côte d''Azur'),
-    ('07', 'Auvergne-Rhône-Alpes'),
+    ('03', 'Auvergne-Rhone-Alpes'),
+    ('04', 'Provence-Alpes-Cote d''Azur'),
+    ('05', 'Provence-Alpes-Cote d''Azur'),
+    ('06', 'Provence-Alpes-Cote d''Azur'),
+    ('07', 'Auvergne-Rhone-Alpes'),
     ('08', 'Grand Est'),
     ('09', 'Occitanie'),
     ('10', 'Grand Est'),
     ('11', 'Occitanie'),
     ('12', 'Occitanie'),
-    ('13', 'Provence-Alpes-Côte d''Azur'),
+    ('13', 'Provence-Alpes-Cote d''Azur'),
     ('14', 'Normandie'),
-    ('15', 'Auvergne-Rhône-Alpes'),
+    ('15', 'Auvergne-Rhone-Alpes'),
     ('16', 'Nouvelle-Aquitaine'),
     ('17', 'Nouvelle-Aquitaine'),
     ('18', 'Centre-Val de Loire'),
     ('19', 'Nouvelle-Aquitaine'),
-    ('21', 'Bourgogne-Franche-Comté'),
+    ('21', 'Bourgogne-Franche-Comte'),
     ('22', 'Bretagne'),
     ('23', 'Nouvelle-Aquitaine'),
     ('24', 'Nouvelle-Aquitaine'),
-    ('25', 'Bourgogne-Franche-Comté'),
-    ('26', 'Auvergne-Rhône-Alpes'),
+    ('25', 'Bourgogne-Franche-Comte'),
+    ('26', 'Auvergne-Rhone-Alpes'),
     ('27', 'Normandie'),
     ('28', 'Centre-Val de Loire'),
     ('29', 'Bretagne'),
@@ -212,12 +212,12 @@ INSERT INTO departements (departement, region) VALUES
     ('35', 'Bretagne'),
     ('36', 'Centre-Val de Loire'),
     ('37', 'Centre-Val de Loire'),
-    ('38', 'Auvergne-Rhône-Alpes'),
-    ('39', 'Bourgogne-Franche-Comté'),
+    ('38', 'Auvergne-Rhone-Alpes'),
+    ('39', 'Bourgogne-Franche-Comte'),
     ('40', 'Nouvelle-Aquitaine'),
     ('41', 'Centre-Val de Loire'),
-    ('42', 'Auvergne-Rhône-Alpes'),
-    ('43', 'Auvergne-Rhône-Alpes'),
+    ('42', 'Auvergne-Rhone-Alpes'),
+    ('43', 'Auvergne-Rhone-Alpes'),
     ('44', 'Pays de la Loire'),
     ('45', 'Centre-Val de Loire'),
     ('46', 'Occitanie'),
@@ -232,42 +232,43 @@ INSERT INTO departements (departement, region) VALUES
     ('55', 'Grand Est'),
     ('56', 'Bretagne'),
     ('57', 'Grand Est'),
-    ('58', 'Bourgogne-Franche-Comté'),
+    ('58', 'Bourgogne-Franche-Comte'),
     ('59', 'Hauts-de-France'),
     ('60', 'Hauts-de-France'),
     ('61', 'Normandie'),
     ('62', 'Hauts-de-France'),
-    ('63', 'Auvergne-Rhône-Alpes'),
+    ('63', 'Auvergne-Rhone-Alpes'),
     ('64', 'Nouvelle-Aquitaine'),
     ('65', 'Occitanie'),
     ('66', 'Occitanie'),
     ('67', 'Grand Est'),
     ('68', 'Grand Est'),
-    ('69', 'Auvergne-Rhône-Alpes'),
-    ('70', 'Bourgogne-Franche-Comté'),
-    ('71', 'Bourgogne-Franche-Comté'),
+    ('69', 'Auvergne-Rhone-Alpes'),
+    ('70', 'Bourgogne-Franche-Comte'),
+    ('71', 'Bourgogne-Franche-Comte'),
     ('72', 'Pays de la Loire'),
-    ('73', 'Auvergne-Rhône-Alpes'),
-    ('74', 'Auvergne-Rhône-Alpes'),
-    ('75', 'Île-de-France'),
+    ('73', 'Auvergne-Rhone-Alpes'),
+    ('74', 'Auvergne-Rhone-Alpes'),
+    ('75', 'Ile-de-France'),
     ('76', 'Normandie'),
-    ('77', 'Île-de-France'),
-    ('78', 'Île-de-France'),
+    ('77', 'Ile-de-France'),
+    ('78', 'Ile-de-France'),
     ('79', 'Nouvelle-Aquitaine'),
     ('80', 'Hauts-de-France'),
     ('81', 'Occitanie'),
     ('82', 'Occitanie'),
-    ('83', 'Provence-Alpes-Côte d''Azur'),
-    ('84', 'Provence-Alpes-Côte d''Azur'),
+    ('83', 'Provence-Alpes-Cote d''Azur'),
+    ('84', 'Provence-Alpes-Cote d''Azur'),
     ('85', 'Pays de la Loire'),
     ('86', 'Nouvelle-Aquitaine'),
     ('87', 'Nouvelle-Aquitaine'),
     ('88', 'Grand Est'),
-    ('89', 'Bourgogne-Franche-Comté'),
-    ('90', 'Bourgogne-Franche-Comté'),
-    ('91', 'Île-de-France'),
-    ('92', 'Île-de-France'),
-    ('93', 'Île-de-France'),
-    ('94', 'Île-de-France'),
-    ('95', 'Île-de-France');
+    ('89', 'Bourgogne-Franche-Comte'),
+    ('90', 'Bourgogne-Franche-Comte'),
+    ('91', 'Ile-de-France'),
+    ('92', 'Ile-de-France'),
+    ('93', 'Ile-de-France'),
+    ('94', 'Ile-de-France'),
+    ('95', 'Ile-de-France');
 
+    
